@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://kit.fontawesome.com/02294b8b69.js" crossorigin="anonymous"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -15,9 +14,11 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<i class="fa-solid fa-laptop-code"></i>
-						</div>
+						<nav>
+							<ul>
+								<li><a id="greeting">Hello, there!</a></li>
+							</ul>
+						</nav>
 						<div class="content">
 							<div class="inner">
 								<h1>Van Kaizer Sebastian</h1>
@@ -53,20 +54,23 @@
 								<h2 class="align-center ">Employment History</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
 								<h3>Photoshop Editor</h3>
-								<h4 class="major">Giovanni Lorenzo Graphics | 2020 - 2022</h4>
+								<h5>Giovanni Lorenzo Graphics</h5>
+								<h5 class="major">2020 - 2022</h5>
 								<p>
 									Utilized Adobe Photoshop to enhance and resize large numbers of
 									photos for multiple orders before being printer and further
 									processed down the production line
 								</p>
 								<h3>Radio Frequency Engineer</h3>
-								<h4 class="major">GLOTECH Philippines | 2019 - 2020 </h4>
+								<h5>GLOTECH Philippines</h5>
+								<h5 class="major">2019 - 2020</h5>
 								<p>
 									Conducted the configuration and testing of multiple cellular sites.
 									Also responsible for acquiring data from multiple cluster sites
 								</p>
 								<h3>Technical Support (OJT)</h3>
-								<h4 class="major">Manila International Airport Authority | May - July 2018</h4>
+								<h5>Manila International Airport Authority</h5>
+								<h5 class="major">May - July 2018</h5>
 								<p>
 									Provided troubleshooting and maintenance of computer systems
 									within multiple airport terminals under the Management
@@ -112,6 +116,7 @@
 							<article id="contact">
 								<h2 class="align-center">Contact Information</h2>
 								<form action="https://www.linkedin.com/in/vksebastian/">
+									<img src="images/profile.jpg" alt="Kaizer">
 									<div class="fields">
 										<div class="field half">
 											<label>Name</label>
@@ -146,6 +151,13 @@
 							<li><a href="https://www.linkedin.com/in/vksebastian/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="https://github.com/vkaizn/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
+						<p class="copyright">
+							<span>TIme on page: </span>
+							<span id="timeInSeconds">0</span>
+							<span>seconds</span>
+
+						</p>
+
 					</footer>
 
 			</div>
@@ -158,7 +170,10 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/timeme.js"></script>
+			<script src="https://kit.fontawesome.com/02294b8b69.js" crossorigin="anonymous"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/timer.js"></script>
 
 	</body>
 </html>
