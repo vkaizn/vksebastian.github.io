@@ -1654,3 +1654,10 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+		img.profile {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			height: 150px; 
+			border-radius: 50%; 
+		}
