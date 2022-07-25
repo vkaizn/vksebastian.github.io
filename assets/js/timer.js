@@ -10,4 +10,5 @@
 				
 				TimeMe.callAfterTimeElapsedInSeconds(10, function(){
 					greeting.innerHTML = "Hire me!";
+					greeting.setAttribute('href', 'https:/vkms.herokuapp.com')
 				});
