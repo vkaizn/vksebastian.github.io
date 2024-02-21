@@ -1661,3 +1661,11 @@ input, select, textarea {
 			height: 150px; 
 			border-radius: 50%; 
 		}
+
+		.mainList *{
+			font-size: large;
+		}
+		.subList {
+			list-style-type: square;
+			margin: 0;
+		}
