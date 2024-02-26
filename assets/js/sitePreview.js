@@ -1,27 +1,33 @@
-const url = 'vkmsebastian.github.io/valentine';
-const link = 'https://api.opengraph.io/api/1.1/site/'+url;
-
-// fetch(`https://api.opengraph.io/api/1.1/site/${encodeURIComponent(url)}`)
-//     .then(response => response.json())
-//     .then(data  => {
-//         const siteImg = data.opengraph.image;   
-//         console.log(siteImg);
-//         const previewDiv = document.getElementsByClassName('project-header');
-//         previewDiv.style.backgroundImge = siteImg;
-//     })
+let urls = [];
+const apiKey = '5c8c91ef5a1d5d997430f0ff13a3b4d6';
+const link = 'https://api.linkpreview.net/?q=';
 
 document.addEventListener('DOMContentLoaded', function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', link, true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        // Process response
-        var responseData = xhr.responseText;
-        console.log(responseData);
-      }
-    };
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Allow specified HTTP methods
-    xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specified headers
-    xhr.send();
+    const previewDiv = document.getElementsByClassName("project-header");
+    const previewLink = document.getElementsByClassName("project-link");
+    Array.from(previewLink).map((element, idx) => {
+        urls[idx] = link+element.getAttribute('href');
+    })
+
+    urls.forEach((url, idx) => {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let responseData = xhr.responseText;
+            let bgURL = 'url('+responseData.image+')';
+            console.log(bgURL);
+            previewDiv[idx].style.backgroundImage= bgURL;
+        }
+        else if (xhr.status == 429) {
+            previewDiv[idx].style.backgroundImage= "url('/images/bg.jpg')";
+        }
+        
+        };
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        xhr.setRequestHeader('X-Linkpreview-Api-Key', apiKey);
+        xhr.send();
+    });
   });
