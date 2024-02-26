@@ -1,7 +1,7 @@
 let urls = [];
 const apiKey = '5c8c91ef5a1d5d997430f0ff13a3b4d6';
 const link = 'https://api.linkpreview.net/?q=';
-const testLink = 'https://api.linkpreview.net/?q=https://vkmsebastian.github.io/valentine';
+const testLink = 'https://api.linkpreview.net/?q=';
 
 document.addEventListener('DOMContentLoaded', function() {
     const previewDiv = document.getElementsByClassName("project-header");
