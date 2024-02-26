@@ -1624,6 +1624,12 @@ input, select, textarea {
 			max-height: auto;
 			width: 40rem;
 		}
+		.introduction-projects {
+			width: 50rem;
+		}
+		.introduction-projects h2{
+			margin:0;
+		}
 		div.project{
 			/* border: white 1px solid; */
 			margin-top: 30px;
@@ -1633,10 +1639,14 @@ input, select, textarea {
 			display: flex;
 			justify-content: space-between;
 			margin: 5px 10px 0 0 ;
-			border: white 1px solid;
+			border: black 1px solid;
 			border-radius: 10px;
+			box-shadow: 0 0 4px white;
 			padding: 10px;
 			transition: all .2s ease-in-out; 
+			background-image: url('/images/bg.jpg');
+			background-size: cover;
+			background-position: center;
 		}
 		.project-header:hover{
 			transform: scale(1.05); 
@@ -1644,6 +1654,14 @@ input, select, textarea {
 		.icons-text {
 			display: flex;
 			flex-direction: column;
+		}
+		.projects-container {
+			display :flex;
+			justify-content: space-between;
+		}
+		.column1 {
+			max-width: 47%;
+			flex: 1;
 		}
 		@keyframes grow-link {
 			0% {transform: scale(1);}
