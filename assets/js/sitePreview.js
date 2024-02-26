@@ -1,6 +1,7 @@
 let urls = [];
 const apiKey = '5c8c91ef5a1d5d997430f0ff13a3b4d6';
 const link = 'https://api.linkpreview.net/?q=';
+const testLink = 'https://api.linkpreview.net/?q=https://vkmsebastian.github.io/valentine';
 
 document.addEventListener('DOMContentLoaded', function() {
     const previewDiv = document.getElementsByClassName("project-header");
@@ -11,10 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     urls.forEach((url, idx) => {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
+        xhr.open('GET', testLink, true);
         xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let responseData = xhr.responseText;
+            console.log(responseData);
             let bgURL = 'url('+(responseData.image || '/images/bg.jpg')+')';
             console.log(bgURL);
             previewDiv[idx].style.backgroundImage= bgURL;
