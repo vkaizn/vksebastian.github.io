@@ -15,12 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let responseData = xhr.responseText;
-            let bgURL = 'url('+responseData.image+')';
+            let bgURL = 'url('+responseData.image || '/images/bg.jpg'+')';
             console.log(bgURL);
             previewDiv[idx].style.backgroundImage= bgURL;
-        }
-        else if (xhr.status == 429) {
-            previewDiv[idx].style.backgroundImage= "url('/images/bg.jpg')";
         }
         
         };

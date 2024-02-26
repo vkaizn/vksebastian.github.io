@@ -1692,6 +1692,15 @@ input, select, textarea {
 				display: flex;
 				flex-direction: row;
 			}
+			.projects-container{
+				flex-direction: column;
+			}
+			.column1{
+				max-width: 100%;
+			}
+			.projects-text {
+				padding-bottom: 10px;
+			}
 		}
 		.project-header-text {
 			display: flex;
