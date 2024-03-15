@@ -1798,7 +1798,8 @@ div.project {
   box-shadow: 0 0 3px white;
   padding: 10px;
   transition: all 0.2s ease-in-out;
-  background-image: url("/images/bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1807,6 +1808,7 @@ div.project {
   border-radius: 20px;
   box-shadow: 0 0 10px white;
 }
+
 .icons-text {
   display: flex;
   flex-direction: column;
@@ -1818,6 +1820,35 @@ div.project {
 .column1 {
   max-width: 47%;
   flex: 1;
+}
+.project-link-icon {
+  position: relative;
+  left: 95%;
+  visibility: hidden;
+}
+.project-header-text {
+  display: flex;
+  flex-direction: row;
+}
+.project-header-text p {
+  font-size: xx-large;
+}
+.header-link {
+  font-weight: bold;
+  margin: auto;
+}
+.project-text {
+  font-size: 0.9rem;
+  margin: 10px 5px 0 5px;
+  padding: 0 20px 0 20px;
+}
+
+.line-break {
+  border-bottom: white 1px solid;
+  margin-bottom: 20px;
+}
+.icons-text p {
+  margin: 0 7px 0 2px;
 }
 @keyframes grow-link {
   0% {
@@ -1862,28 +1893,12 @@ div.project {
   .projects-text {
     padding-bottom: 10px;
   }
-}
-.project-header-text {
-  display: flex;
-  font-size: xx-large;
-  align-items: center;
-}
-.header-link {
-  font-weight: bold;
-  margin: auto;
-}
-.project-text {
-  font-size: 0.9rem;
-  margin: 10px 5px 0 5px;
-  padding: 0 20px 0 20px;
-}
-
-.line-break {
-  border-bottom: white 1px solid;
-  margin-bottom: 20px;
-}
-.icons-text p {
-  margin: 0 7px 0 2px;
+  .project-link-icon {
+    visibility: visible;
+  }
+  .project-header-text {
+    width: 100%;
+  }
 }
 
 /* Work Tab */
