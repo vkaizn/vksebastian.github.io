@@ -726,11 +726,44 @@ input[type="radio"] + label:before {
   font-weight: 400;
 }
 
-.icon > .label {
-  display: none;
+/* .icon-div {
+  position: relative;
+  display: inline-block;
+} */
+
+/* .icon-tooltip {
+  position: absolute;
+  z-index: 1;
+  bottom: 45px;
+
+  visibility: hidden;
+  width: auto;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+} */
+
+/* .icon-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
-.icon:before {
+.icon-div:hover .icon-tooltip {
+  visibility: visible;
+  opacity: 1;
+} */
+
+/* .icon:before {
   line-height: inherit;
 }
 
@@ -740,7 +773,7 @@ input[type="radio"] + label:before {
 
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
-}
+} */
 
 /* Image */
 
@@ -1215,7 +1248,6 @@ button {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
