@@ -1794,6 +1794,7 @@ div.project {
   justify-content: space-between;
   margin: 5px 10px 0 0;
   border: black 1px solid;
+  border-radius: 6px;
   box-shadow: 0 0 3px white;
   padding: 10px;
   transition: all 0.2s ease-in-out;
@@ -1844,9 +1845,9 @@ div.project {
     border: white 1px solid;
     padding: 5px;
     margin: 0;
-    animation-name: grow-link;
+    /* animation-name: grow-link;
     animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
   }
   .icons-text {
     display: flex;
@@ -1892,10 +1893,17 @@ div.project {
   flex-direction: column;
 }
 .work-entry {
-  flex: 1;
+  padding: 10px 30px;
+  border: 1px solid rgb(255, 255, 255);
+  border-bottom: none;
+  border-radius: 6px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
+
 .work-header {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1905,30 +1913,48 @@ div.project {
   flex-direction: row;
 }
 .work-item p {
-  margin: 0 2px 0 2px;
   font-size: 1.2rem;
+  margin: 0;
 }
 .work-position {
   font-weight: bold;
+  margin: 0;
 }
 .work-text {
   margin: 0;
-  padding: 5px 30px 0 30px;
+  margin-top: 15px;
+}
+.pipe {
+  padding: 0 5px;
 }
 @media only screen and (max-width: 600px) {
+  .work-header {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .work-entry {
+    padding: 5px 20px;
+  }
+  .work-entry i {
+    display: none;
+  }
   .work-item {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
   .pipe {
     display: none;
   }
   .work-item p {
-    font-size: 1rem;
+    font-size: 3.2vw;
   }
   .work-text {
-    padding: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin: 0;
+    /* display: none; */
   }
 }
 .work-duration {
@@ -1936,10 +1962,11 @@ div.project {
 }
 
 .work-div {
-  border-top: white 1px solid;
   width: 10%;
   align-self: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 /* Skills */
 .skill-list {
