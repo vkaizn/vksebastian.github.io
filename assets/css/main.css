@@ -2022,11 +2022,14 @@ div.project {
   -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.64);
   box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.64);
 }
+.skill-pill > p {
+  border-left: 1px solid rgb(35, 176, 176);
+  padding: 0 3px;
+}
 
 .skill-pill > i {
   font-size: x-large;
-  border-right: 1px solid rgb(35, 176, 176);
-  padding: 3px;
+  padding-top: 3px;
 }
 .skill-pill > p {
   margin: 0;
