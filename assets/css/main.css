@@ -1704,6 +1704,19 @@ body.is-preload #header .content .inner {
   box-shadow: 0px 0px 61px 7px rgba(90, 0, 115, 0.9);
   border-radius: 10px;
   opacity: 0;
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 10px 5px rgba(83, 0, 106, 0.9);
+  }
+  50% {
+    box-shadow: 0px 0px 100px 7px rgba(90, 0, 115, 0.9);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px rgba(83, 0, 106, 0.9);
+  }
 }
 
 #main article.active {
@@ -1913,7 +1926,7 @@ div.project {
 }
 .work-entry {
   padding: 10px 30px;
-  border: 1px solid rgb(255, 255, 255);
+  box-shadow: inset 1px 1px 5px white;
   border-bottom: none;
   border-radius: 6px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -2037,7 +2050,6 @@ div.project {
 }
 
 @media only screen and (max-width: 600px) {
-
   .skill-header {
     text-align: center;
   }
