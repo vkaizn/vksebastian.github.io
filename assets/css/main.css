@@ -2017,14 +2017,14 @@ div.project {
   font-size: large;
   user-select: none;
   transition: ease-in-out 0.1s;
+  transition: box-shadow ease-in-out 0.2s;
 
   -webkit-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.64);
   -moz-box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.64);
   box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.64);
 }
-.skill-pill > p {
+.skill-pill-sep {
   border-left: 1px solid rgb(35, 176, 176);
-  padding: 0 3px;
 }
 
 .skill-pill > i {
@@ -2043,7 +2043,7 @@ div.project {
 .skill-list {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
+  width: 50rem;
 }
 .skill-header {
   font-variant: small-caps;
